@@ -16,10 +16,8 @@ public class PoiExcelTest {
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {
-        //获取需要解析的文件
-        FileInputStream inputStream = new FileInputStream(new File(SAMPLE_XLSX_FILE_PATH));
         //通过工厂创建工作簿
-        Workbook workbook = WorkbookFactory.create(inputStream);
+        Workbook workbook = WorkbookFactory.create(new FileInputStream(new File(SAMPLE_XLSX_FILE_PATH)));
         /*
          * getNumberOfSheets()方法：用于获取表格数量
          * getSheetAt(i)方法：用于获取指定的表格(下标从0开始)
